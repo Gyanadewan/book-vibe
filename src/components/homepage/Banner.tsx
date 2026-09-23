@@ -8,7 +8,7 @@ function Banner() {
 
     {/* Left Side */}
     <div className="flex-1 text-center lg:text-left">
-      <h2 className="mt-5 text-5xl  font-bold  max-w-lg">
+      <h2 className="mt-5 text-5xl  font-bold git branch -M main max-w-lg">
         Books to freshen up your Bookshelf
       </h2>
 
