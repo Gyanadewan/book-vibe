@@ -1,6 +1,7 @@
 
+import BookCard from '@/components/shared/BookCard'
 import { IBook } from '@/types/books.type'
-import BookCard from '../shared/BookCard'
+
 
 const getBooks = async () => {
     const res = await fetch ("http://localhost:3000/booksdata.json")
@@ -12,10 +13,10 @@ const getBooks = async () => {
     console.log(books)
   return (
     <div>
-       <h2 className='text-center text-3xl p-5 font-bold'>Populer Books </h2>
-       <div className='grid grid-cols-3 gap-3 container mx-auto'>
+       <h2 className='text-center text-3xl p-5 font-bold'>All Books</h2>
+       <div className='grid grid-cols-4 gap-3 container mx-auto'>
          {
-         books.slice(0, 6).map((book:IBook, index:number)=> <BookCard key={index} book={book}></BookCard> )
+         books.map((book:IBook, index:number)=> <BookCard key={index} book={book}></BookCard> )
          }
        </div>
     </div>

@@ -1,5 +1,6 @@
 import { IBook } from "@/types/books.type";
 import Image from "next/image";
+import Link from "next/link";
 
 interface iBookBardProps {
   book : IBook
@@ -86,9 +87,11 @@ function BookCard({ book }:iBookBardProps) {
 
         {/* Button */}
         <div className="card-actions mt-2">
-          <button className="btn btn-primary btn-sm w-full">
+          <Link href={`/books/${book.bookId}`}>
+            <button className="btn btn-primary btn-sm w-full">
             View Details
           </button>
+          </Link>
         </div>
 
       </div>
