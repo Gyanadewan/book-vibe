@@ -1,3 +1,5 @@
+import ReadButton from "@/components/readbutton/read-button";
+import WishListButton from "@/components/wishlistbutton/wishlist-button";
 import { IBook } from "@/types/books.type";
 import Image from "next/image";
 
@@ -143,14 +145,9 @@ async function BookDetailsPage({
 
           {/* Buttons */}
           <div className="card-actions mt-4">
+             <ReadButton book={ book }></ReadButton>
 
-            <button className="btn btn-primary btn-sm">
-              Read
-            </button>
-
-            <button className="btn btn-outline btn-sm">
-              Add to Wishlist
-            </button>
+            <WishListButton book={book}></WishListButton>
 
           </div>
 
